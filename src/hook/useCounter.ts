@@ -1,9 +1,8 @@
-import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react"
-
+import { gsap } from "gsap";
 const MAXIMUN_COUNT = 10;
 
-export const CounterEffect = () => {
+export const useCounter = () => {
     const [counter, setCounter] = useState(5);
     const counterElement = useRef(null)
 
@@ -23,14 +22,9 @@ export const CounterEffect = () => {
         setCounter(prev => Math.min(prev + 1, MAXIMUN_COUNT));
     }
 
-    return (
-        <>
-               <h1>Counter Effect </h1>
-            <h1 ref={counterElement}>Counter: {counter} </h1>
-
-            <button onClick={handleClick}>
-                    +1
-            </button>
-        </>
-    )
+    return {
+        counter,
+        counterElement,
+        handleClick
+    }
 }
