@@ -7,8 +7,8 @@ import { CounterReducerComponent } from './bases/CounterReducerComponent';
 function App() {
   return (
     <>
-    <CounterEffect></CounterEffect>
-    <CounterHook></CounterHook>
+    {/* <CounterEffect></CounterEffect>
+    <CounterHook></CounterHook> */}
     <CounterReducerComponent></CounterReducerComponent>
     </>
   );
